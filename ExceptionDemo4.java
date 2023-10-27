@@ -2,7 +2,7 @@ import java.util.*;
 
 class Demo
 {
-    public void Division()
+    public void Division() throws ArithmeticException 
     {
         Scanner sobj = new Scanner(System.in);
 
@@ -20,12 +20,24 @@ class Demo
     }
 }
 
-public class ExceptionDemo3
+public class ExceptionDemo4
 {
     public static void main(String args[])
     {
         Demo dobj = new Demo();
-
-        dobj.Division();
+        try
+        {
+            System.out.println("Inside Try Block");
+            dobj.Division();
+        }
+        catch(ArithmeticException obj)
+        {
+            System.out.println("Inside Catch");
+        }
+        finally 
+        {
+            System.out.println("Inside Finally");
+        }
     }
 }
+
