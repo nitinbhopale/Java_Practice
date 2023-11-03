@@ -6,9 +6,13 @@ class Demo extends Thread
         
 
     }
+    synchronized public void Display()
+    {
+        // Logic 
+    }
 }
 
-public class Multi6
+public class Multi7
 {
     public static void main(String args[]) throws Exception
     {
@@ -34,4 +38,5 @@ public class Multi6
 
     }
 }
+
 
