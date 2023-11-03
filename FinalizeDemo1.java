@@ -14,6 +14,10 @@ class Employee
         this.Address = addr;
     }
 
+    protected void finalize()
+    {
+        System.out.println("Inside Finalize method...");
+    }
 
     void Display()
     {
@@ -24,11 +28,14 @@ class Employee
     }
 }
 
-public class FinalizeDemo 
+public class FinalizeDemo1
 {
     public static void main(String args[])
     {
         Employee eobj = new Employee("Amit",78000,28,"Karve Road Pune");
         eobj.Display();
+        eobj = null;
+
+        System.gc();
     }
 }

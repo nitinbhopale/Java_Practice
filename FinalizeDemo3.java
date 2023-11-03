@@ -1,4 +1,5 @@
 
+
 class Employee
 {
     public String name;
@@ -13,8 +14,6 @@ class Employee
         this.Age = A;
         this.Address = addr;
     }
-
-
     void Display()
     {
         System.out.println("Employee Name : "+this.name);
@@ -24,11 +23,19 @@ class Employee
     }
 }
 
-public class FinalizeDemo 
+public class FinalizeDemo3
 {
     public static void main(String args[])
     {
         Employee eobj = new Employee("Amit",78000,28,"Karve Road Pune");
         eobj.Display();
+        
+        String str = "Marvellous";
+
+        System.out.println(eobj.getClass());
+        System.out.println(str.getClass());
+
+
     }
 }
+
